@@ -1,0 +1,26 @@
+apply plugin: 'com.android.application'
+
+android {
+  compileSdkVersion rootProject.ext.compileSdkVersion as Integer
+  buildToolsVersion rootProject.ext.buildToolsVersion as String
+
+  defaultConfig {
+    applicationId "com.sopan.refresh_layout"
+    minSdkVersion rootProject.ext.minSdkVersion as Integer
+    targetSdkVersion rootProject.ext.targetSdkVersion as Integer
+    versionCode rootProject.ext.versionCode as Integer
+    versionName rootProject.ext.versionName as String
+  }
+
+  buildTypes {
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+    }
+  }
+}
+
+dependencies {
+  implementation 'com.android.support:appcompat-v7:27.1.1'
+  //implementation 'com.github.recruit-lifestyle:WaveSwipeRefreshLayout:1.6'
+}
